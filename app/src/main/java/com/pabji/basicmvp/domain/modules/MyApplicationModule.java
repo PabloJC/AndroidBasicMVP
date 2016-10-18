@@ -2,6 +2,8 @@ package com.pabji.basicmvp.domain.modules;
 
 import android.content.Context;
 
+import com.pabji.basicmvp.domain.executor.ThreadExecutor;
+import com.pabji.basicmvp.domain.executor.ThreadExecutorImpl;
 import com.pabji.basicmvp.ui.navigation.Router;
 
 import javax.inject.Named;
@@ -30,5 +32,10 @@ public class MyApplicationModule {
     @Provides @Singleton
     Router provideRouter(){
         return new Router();
+    }
+
+    @Provides @Singleton
+    ThreadExecutor provideThreadExecutor(ThreadExecutorImpl threadExecutor){
+        return threadExecutor;
     }
 }
