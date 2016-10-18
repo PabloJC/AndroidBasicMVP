@@ -2,8 +2,8 @@ package com.pabji.basicmvp;
 
 import android.app.Application;
 
-import com.pabji.basicmvp.domain.di.components.DaggerMyApplicationComponent;
-import com.pabji.basicmvp.domain.di.components.MyApplicationComponent;
+import com.pabji.basicmvp.domain.components.DaggerMyApplicationComponent;
+import com.pabji.basicmvp.domain.components.MyApplicationComponent;
 import com.pabji.basicmvp.domain.modules.MyApplicationModule;
 
 /**

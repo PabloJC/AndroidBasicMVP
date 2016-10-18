@@ -3,7 +3,7 @@ package com.pabji.basicmvp.domain.components;
 import android.content.Context;
 
 import com.pabji.basicmvp.domain.modules.MyApplicationModule;
-import com.pabji.basicmvp.ui.activities.BaseActivity;
+import com.pabji.basicmvp.ui.activities.base.BaseActivity;
 import com.pabji.basicmvp.ui.navigation.Router;
 
 import javax.inject.Named;

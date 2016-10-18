@@ -1,4 +1,4 @@
-package com.pabji.basicmvp.ui.activities;
+package com.pabji.basicmvp.ui.activities.base;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import com.pabji.basicmvp.MyApplication;
-import com.pabji.basicmvp.domain.di.components.MyApplicationComponent;
+import com.pabji.basicmvp.domain.components.MyApplicationComponent;
 import com.pabji.basicmvp.domain.modules.BaseActivityModule;
 
 public class BaseActivity extends AppCompatActivity {
