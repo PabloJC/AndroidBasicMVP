@@ -1,6 +1,6 @@
 package com.pabji.basicmvp.domain.features;
 
-import com.pabji.basicmvp.core.network.RecipeRepository;
+import com.pabji.basicmvp.core.repositories.RecipeRepository;
 import com.pabji.basicmvp.domain.features.base.BaseInteractorImpl;
 import com.pabji.basicmvp.ui.mvp.models.Recipe;
 

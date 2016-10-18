@@ -1,4 +1,4 @@
-package com.pabji.basicmvp.domain.di;
+package com.pabji.basicmvp.domain.scopes;
 
 import java.lang.annotation.Retention;
 

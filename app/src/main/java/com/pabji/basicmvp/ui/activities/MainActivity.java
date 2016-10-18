@@ -9,7 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import com.pabji.basicmvp.R;
 import com.pabji.basicmvp.domain.components.DaggerMainActivityComponent;
 import com.pabji.basicmvp.domain.components.MainActivityComponent;
-import com.pabji.basicmvp.domain.di.HasComponent;
+import com.pabji.basicmvp.domain.scopes.HasComponent;
 import com.pabji.basicmvp.domain.modules.MainActivityModule;
 import com.pabji.basicmvp.ui.activities.base.BaseMVPActivity;
 import com.pabji.basicmvp.ui.mvp.presenters.MainActivityPresenter;

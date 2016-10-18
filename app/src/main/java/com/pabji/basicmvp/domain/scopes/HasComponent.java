@@ -1,4 +1,4 @@
-package com.pabji.basicmvp.domain.di;
+package com.pabji.basicmvp.domain.scopes;
 
 /**
  * Created by pabji on 17/06/2016.

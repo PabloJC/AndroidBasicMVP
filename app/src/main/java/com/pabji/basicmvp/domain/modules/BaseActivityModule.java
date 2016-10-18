@@ -2,7 +2,7 @@ package com.pabji.basicmvp.domain.modules;
 
 import android.content.Context;
 
-import com.pabji.basicmvp.domain.di.PerActivity;
+import com.pabji.basicmvp.domain.scopes.PerActivity;
 
 import javax.inject.Named;
 

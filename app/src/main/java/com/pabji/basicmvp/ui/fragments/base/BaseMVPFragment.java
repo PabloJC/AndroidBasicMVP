@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.hannesdorfmann.mosby.mvp.MvpFragment;
-import com.pabji.basicmvp.domain.di.HasComponent;
+import com.pabji.basicmvp.domain.scopes.HasComponent;
 import com.pabji.basicmvp.ui.mvp.presenters.base.BasePresenter;
 import com.pabji.basicmvp.ui.mvp.views.base.BaseView;
 
