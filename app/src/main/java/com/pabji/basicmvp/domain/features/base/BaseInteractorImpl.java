@@ -17,18 +17,18 @@ import rx.subscriptions.Subscriptions;
 
 public abstract class BaseInteractorImpl<T> implements BaseInteractor<T>{
 
-    @Inject
+    /*@Inject
     ThreadExecutor threadExecutor;
 
     @Inject
-    PostExecutionThread postExecutionThread;
+    PostExecutionThread postExecutionThread;*/
 
     private Subscription subscription = Subscriptions.empty();
 
     protected abstract Observable<T> buildFeatureObservable();
 
     @Override
-    public void execute(Subscriber<T> subscriber) {
+    public void execute(Subscriber<T> subscriber, ThreadExecutor threadExecutor, PostExecutionThread postExecutionThread) {
         this.subscription = this.buildFeatureObservable()
             .subscribeOn(Schedulers.from(threadExecutor))
                 .observeOn(postExecutionThread.getScheduler())

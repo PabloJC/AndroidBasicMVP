@@ -1,9 +1,7 @@
 package com.pabji.basicmvp.domain.features.base;
 
-import com.pabji.basicmvp.domain.callbacks.DataListener;
-import com.pabji.basicmvp.ui.mvp.models.Recipe;
-
-import java.util.List;
+import com.pabji.basicmvp.domain.executor.PostExecutionThread;
+import com.pabji.basicmvp.domain.executor.ThreadExecutor;
 
 import rx.Subscriber;
 
@@ -12,5 +10,5 @@ import rx.Subscriber;
  */
 
 public interface BaseInteractor<T> {
-    void execute(Subscriber<T> subscriber);
+    void execute(Subscriber<T> subscriber, ThreadExecutor threadExecutor, PostExecutionThread postExecutionThread);
 }

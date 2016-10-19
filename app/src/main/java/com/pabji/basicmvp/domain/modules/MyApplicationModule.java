@@ -2,9 +2,14 @@ package com.pabji.basicmvp.domain.modules;
 
 import android.content.Context;
 
+import com.pabji.basicmvp.data.helpers.DBSqlite;
+import com.pabji.basicmvp.data.repositories.RecipeRepository;
+import com.pabji.basicmvp.data.repositories.RecipeRepositoryImpl;
+import com.pabji.basicmvp.domain.executor.PostExecutionThread;
 import com.pabji.basicmvp.domain.executor.ThreadExecutor;
 import com.pabji.basicmvp.domain.executor.ThreadExecutorImpl;
-import com.pabji.basicmvp.ui.navigation.Router;
+import com.pabji.basicmvp.domain.executor.UIThread;
+import com.pabji.basicmvp.presentation.navigation.Router;
 
 import javax.inject.Named;
 import javax.inject.Singleton;
@@ -38,4 +43,20 @@ public class MyApplicationModule {
     ThreadExecutor provideThreadExecutor(ThreadExecutorImpl threadExecutor){
         return threadExecutor;
     }
+
+    @Provides @Singleton
+    PostExecutionThread providePostExecutionThread(UIThread uiThread){
+        return uiThread;
+    }
+
+    @Provides @Singleton
+    RecipeRepository provideRecipeRepository(RecipeRepositoryImpl recipeRepository){
+        return recipeRepository;
+    }
+
+    @Provides @Singleton
+    DBSqlite provideDBSqlite(){
+        return new DBSqlite(context);
+    }
+
 }

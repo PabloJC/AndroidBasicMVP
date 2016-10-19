@@ -1,8 +1,10 @@
 package com.pabji.basicmvp.domain.features;
 
-import com.pabji.basicmvp.core.repositories.RecipeRepository;
+import android.util.Log;
+
+import com.pabji.basicmvp.data.repositories.RecipeRepository;
 import com.pabji.basicmvp.domain.features.base.BaseInteractorImpl;
-import com.pabji.basicmvp.ui.mvp.models.Recipe;
+import com.pabji.basicmvp.presentation.mvp.models.Recipe;
 
 import java.util.List;
 
@@ -16,8 +18,13 @@ import rx.Observable;
 
 public class GetRecipeListInteractor extends BaseInteractorImpl<List<Recipe>> {
 
+    //@Inject
+    private RecipeRepository recipeRepository;
+
     @Inject
-    RecipeRepository recipeRepository;
+    public GetRecipeListInteractor(RecipeRepository recipeRepository){
+        this.recipeRepository = recipeRepository;
+    }
 
     @Override
     protected Observable<List<Recipe>> buildFeatureObservable() {

@@ -2,7 +2,7 @@ package com.pabji.basicmvp.domain.components;
 
 import com.pabji.basicmvp.domain.scopes.PerActivity;
 import com.pabji.basicmvp.domain.modules.MainActivityModule;
-import com.pabji.basicmvp.ui.activities.MainActivity;
+import com.pabji.basicmvp.presentation.activities.MainActivity;
 
 import dagger.Component;
 
