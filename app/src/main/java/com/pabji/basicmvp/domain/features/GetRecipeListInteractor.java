@@ -1,6 +1,5 @@
 package com.pabji.basicmvp.domain.features;
 
-import android.util.Log;
 
 import com.pabji.basicmvp.data.repositories.RecipeRepository;
 import com.pabji.basicmvp.domain.features.base.BaseInteractorImpl;
@@ -11,6 +10,7 @@ import java.util.List;
 import javax.inject.Inject;
 
 import rx.Observable;
+import rx.functions.Action1;
 
 /**
  * Created by Pablo Jiménez Casado on 18/10/2016.

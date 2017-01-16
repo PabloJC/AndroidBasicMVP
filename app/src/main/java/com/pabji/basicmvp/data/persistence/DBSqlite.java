@@ -1,4 +1,4 @@
-package com.pabji.basicmvp.data.helpers;
+package com.pabji.basicmvp.data.persistence;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -11,12 +11,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.inject.Inject;
-import javax.inject.Named;
 import javax.inject.Singleton;
-
-import rx.Observable;
-import rx.Subscriber;
 
 /**
  * Created by Pablo Jiménez Casado on 19/10/2016.

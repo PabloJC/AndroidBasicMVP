@@ -3,6 +3,7 @@ package com.pabji.basicmvp.presentation.mvp.presenters;
 import android.content.Context;
 import android.util.Log;
 
+import com.pabji.basicmvp.data.constants.ErrorConstants;
 import com.pabji.basicmvp.data.repositories.RecipeRepository;
 import com.pabji.basicmvp.domain.executor.PostExecutionThread;
 import com.pabji.basicmvp.domain.executor.ThreadExecutor;
@@ -32,9 +33,6 @@ public class MainActivityPresenter extends BasePresenter<MainActivityView> {
     GetRecipeListInteractor recipeListInteractor;
 
     @Inject
-    RecipeRepository recipeRepository;
-
-    @Inject
     ThreadExecutor threadExecutor;
 
     @Inject
@@ -44,6 +42,7 @@ public class MainActivityPresenter extends BasePresenter<MainActivityView> {
     public MainActivityPresenter(){}
 
     public void init() {
+        getView().showLoading();
         getRecipeList();
     }
 
@@ -52,18 +51,16 @@ public class MainActivityPresenter extends BasePresenter<MainActivityView> {
             @Override
             public void onCompleted() {
                 Log.d("Complete","Complete");
+                getView().hideLoading();
             }
 
             @Override
             public void onError(Throwable e) {
-                Log.d("onError","onError");
+                Log.d("onError", "onError");
             }
 
             @Override
             public void onNext(List<Recipe> recipes) {
-                if(recipes.isEmpty()){
-                    Log.d("onNext","Vacio");
-                }
                 getView().showRecipeList(recipes);
             }
         },threadExecutor,postExecutionThread);

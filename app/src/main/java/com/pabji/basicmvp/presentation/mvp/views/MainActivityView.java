@@ -10,5 +10,12 @@ import java.util.List;
  */
 
 public interface MainActivityView extends BaseView {
+
+    void showLoading();
+
+    void hideLoading();
+
+    void showEmptyList();
+
     void showRecipeList(List<Recipe> recipes);
 }

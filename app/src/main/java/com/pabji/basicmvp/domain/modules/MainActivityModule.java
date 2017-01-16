@@ -23,4 +23,6 @@ public class MainActivityModule extends BaseActivityModule {
     GetRecipeListInteractor provideRecipeListInteractor(RecipeRepository recipeRepository){
         return new GetRecipeListInteractor(recipeRepository);
     }
+
+
 }

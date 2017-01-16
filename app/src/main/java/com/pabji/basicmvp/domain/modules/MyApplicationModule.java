@@ -2,7 +2,7 @@ package com.pabji.basicmvp.domain.modules;
 
 import android.content.Context;
 
-import com.pabji.basicmvp.data.helpers.DBSqlite;
+import com.pabji.basicmvp.data.persistence.DBSqlite;
 import com.pabji.basicmvp.data.repositories.RecipeRepository;
 import com.pabji.basicmvp.data.repositories.RecipeRepositoryImpl;
 import com.pabji.basicmvp.domain.executor.PostExecutionThread;
