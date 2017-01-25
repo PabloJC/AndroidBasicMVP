@@ -3,8 +3,6 @@ package com.pabji.basicmvp.presentation.mvp.presenters;
 import android.content.Context;
 import android.util.Log;
 
-import com.pabji.basicmvp.data.constants.ErrorConstants;
-import com.pabji.basicmvp.data.repositories.RecipeRepository;
 import com.pabji.basicmvp.domain.executor.PostExecutionThread;
 import com.pabji.basicmvp.domain.executor.ThreadExecutor;
 import com.pabji.basicmvp.domain.features.GetRecipeListInteractor;
